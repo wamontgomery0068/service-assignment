@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UserService } from '../users.service';
+
 @Component({
   selector: 'app-inactive-users',
   templateUrl: './inactive-users.component.html',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InactiveUsersComponent implements OnInit {
 
-  constructor() { }
+  // Crate an users array and set type to string
+  users: string [];
+
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
+    this.users = this.userService.inactiveUsers;
+  }
+
+  // Create an onSetToActive method
+  onSetToActive(id: number) {
+    this.userService.setToActive(id);
   }
 
 }
