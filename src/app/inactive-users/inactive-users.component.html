@@ -6,9 +6,11 @@
 <ul class = "list-group">
 
     <!-- list item tag -->
-    <li class = "list-group-item">
+    <li 
+        class = "list-group-item"
+        *ngFor = "let user of users; let i = index">
 
-        <a href="#"> Set to Active </a>
+        {{ user }} | <a href = "#" (click) = "onSetToActive(i)"> Set to Active </a>
 
     </li>
 
