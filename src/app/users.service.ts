@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { CounterService } from './counter.service';
+
 @Injectable()
 export class UserService {
 
@@ -8,7 +10,7 @@ export class UserService {
     // Create an Inactive Users Array with a few names
     inactiveUsers = ['Daniel','Joseph','John', 'Brian']
 
-    constructor(){}
+    constructor(private counterService: CounterService){}
 
     // Create a setToActive method
     setToActive(id: number) {
@@ -18,6 +20,8 @@ export class UserService {
 
         // Splice or Delete the inactiveUser from the activeUsers array by their id
         this.inactiveUsers.splice(id, 1);
+
+        this.counterService.incrementInactiveToActive();
 
     }
 
@@ -29,6 +33,8 @@ export class UserService {
 
         // Splice or Delete the activeUser from the inactiveUsers array by their id
         this.activeUsers.splice(id, 1);
+
+        this.counterService.incrementActiveToInactive();
 
     }
 }
