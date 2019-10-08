@@ -1,17 +1,24 @@
 <!-- Inactive Users Component  -->
 
-<h3> Inactive Users </h3>
+<div class = "Active_Inactive_Card">
 
-<!-- unordered list tag -->
-<ul class = "list-group">
+    <div class = "Active_Inactive_Title_Container">
+        <h2 class = "Active_Inactive_Title">Inactive Users</h2>
+    </div>
 
-    <!-- list item tag -->
-    <li 
-        class = "list-group-item"
-        *ngFor = "let user of users; let i = index">
+    <div class = "Active_Inactive_List_Container">
+        <!-- unordered list tag -->
+        <ul class="Active_Inactive_List">
+    
+            <!-- list item tag -->
+    
+            <li class="Active_Inactive_List_Item" *ngFor="let user of users; let i = index">
+    
+                {{ user }} | <a href="#" (click)="onSetToActive(i)"> Set to Active </a>
+    
+            </li>
+    
+        </ul>
+    </div>
 
-        {{ user }} | <a href = "#" (click) = "onSetToActive(i)"> Set to Active </a>
-
-    </li>
-
-</ul>
+</div>
