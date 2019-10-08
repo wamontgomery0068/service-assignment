@@ -1,6 +1,27 @@
 .Main_Container {
-    display: flex;
-	flex-direction: row;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center;
+
+	/* border: 2px solid black; */
+	height: 94vh;
+	width: 34vw;
 }
+
+.Main_Card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	
+	/* border: 2px solid black; */
+	margin: 2%;
+	height: 92vh;
+	width: 32vw;
+}
+
+
+
+
+

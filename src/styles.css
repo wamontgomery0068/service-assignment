@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    /* Flexbox.help Referenced */
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    align-items: center;
+    
+    height: 100vh;
+    margin: 0%;
+}
+
+.Active_Inactive_Card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+    
+    background-color: dodgerblue;
+    border-radius: 2%;
+    /* border: 2px solid black; */
+    height: 39vh;
+    width: 18vw;
+}
+
+.Active_Inactive_Title_Container {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    /* border: 2px solid black; */
+    border-top-left-radius: 1cm;
+    border-top-right-radius: 1cm;
+    height: 8vh;
+    width: 16vw;
+    margin: 4%;
+}
+
+.Active_Inactive_List_Container {
+    background-color: white;
+    /* border: 2px solid black; */
+    border-bottom-left-radius: 1cm;
+    border-bottom-right-radius: 1cm;
+    height: 26vh;
+    width: 16vw;
+}
+
+.Active_Inactive_Title {
+
+}
+
+.Active_Inactive_List {
+    list-style-type: none;
+}
+
+.Active_Inactive_List_Item {
+    margin-right: 20px;
+}
