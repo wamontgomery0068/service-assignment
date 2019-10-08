@@ -8,9 +8,9 @@
     <!-- list item tag-->
     <li 
         class = "list-group-item"
-        *ngFor="let user of users; let i = index">
+        *ngFor = "let user of users; let i = index">
 
-        {{ user }} | <a href="#" (click)="onSetToInactive(i)"> Set to Inactive </a>
+        {{ user }} | <a href = "#" (click) = "onSetToInactive(i)"> Set to Inactive </a>
         
     </li>
 
